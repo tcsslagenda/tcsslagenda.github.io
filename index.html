@@ -1,0 +1,230 @@
+
+<!DOCTYPE HTML>
+<!--HTMl5 Syntax-->
+<html>
+
+<head>
+    <!--Meta tag-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--viewport meta tag to enable RWD-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+    <title>Agenda</title>
+    <!-- Jquery file -->
+    <script src="Content/Mobile/JS/jquery-1.10.2.js"></script>
+    <!-- Jquery Mobile File -->
+    <script src="Content/Mobile/JS/jquery.mobile-1.4.0.min.js" type="text/javascript"></script>
+    <link href="Content/Mobile/JS/jquery.mobile-1.4.0.min.css" rel="stylesheet" />
+    <link href="Content/CSS/Newindex.css" rel="stylesheet" type="text/css" />
+    <!-- Prefix-Free to automatically creates the required prefixes -->
+    <!-- <script src="Download.js"></script> -->
+    <script type="text/javascript">
+    $("document").ready(function() {
+        $("#btnGetAPP").click(function() {
+console.log('djsfhj');
+            document.location.href = "itms-services://?action=download-manifest&url=https:/tcsagenda.github.io/manifest.plist"
+        });
+        
+        	$("#btnGetAPP_android").click(
+	function()
+	{
+		//alert("ok");
+		//document.location.href = "itms-services://?action=download-manifest&url=https://interviewready.tcsbpo.net/iOS/manifest.plist";
+	    window.location.href = "Agenda.apk";
+	    //window.location.href = window.location.href;
+		//$("#btnPopup1").click();
+	}
+	);
+    });
+    </script>
+    <style>
+    body {
+        height: 100%;
+        overflow: hidden;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    #pageContainer {
+        width: 60%;
+        background-color: #1F8CAE;
+        margin: 0 auto;
+        position: relative;
+        background-image: url('Content/Images/bg_gradiant.png');
+        background-repeat: repeat-x;
+        background-position: bottom left;
+    }
+    
+    header {
+        height: 20%;
+        overflow: hidden;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    header > div > img {
+        width: 55%;
+        height: auto;
+    }
+    
+    .ui-content {
+        margin: 0;
+        padding: 0;
+    }
+    
+    #contentContainer {
+        height: 100%;
+        overflow: hidden;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    .ReportHeader > img {
+        width: 50%;
+        height: auto;
+        max-width: 230px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .myDownloadArea {
+        width: 80%;
+        margin: 0 10% 0 10%;
+    }
+    
+    .textStep {
+        width: 30%;
+        text-align: right;
+        vertical-align: middle;
+        font-size: 1.5em;
+    }
+    
+    .btnStep {
+        width: 70%;
+        text-align: left;
+        vertical-align: middle;
+    }
+    
+    .buttonGet {
+        background: #f5e047;
+        cursor: pointer;
+        width: 80%;
+        overflow: visible;
+        padding: 5%;
+        text-align: center;
+        font-size: 1.5em;
+        color: #58501a;
+        text-shadow: none;
+        border-radius: 5px;
+        margin: 0 auto;
+        font-weight: bold;
+    }
+        .buttonGet:first-child{margin-bottom: 20px;}
+    .freeArea {
+        text-align: right;
+        font-size: 1.5em;
+        padding-right: 15%;
+    }
+    
+    @media screen and (max-width: 480px) {
+        .buttonGet,
+        .textStep,
+        p,
+        li {
+            font-size: 0.9em;
+        }
+    }
+    
+    @media screen and (min-width: 1024px) {
+        .buttonGet {
+            font-size: 1.5em;
+            width: 60%;
+        }
+        .textStep {
+            font-size: 1.5em;
+        }
+        header > div > img {
+            width: 30%;
+            height: auto;
+        }
+        .freeArea {
+            text-align: right;
+            font-size: 1.5em;
+            padding-right: 30%;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <!--  Main Page Structure Start-->
+    <div id="pageContainer" data-role="page">
+        <!-- Page Header -->
+        <header data-position="fixed">
+            <div>
+                <br/>
+                <img src="tcs_logo.png" />
+            </div>
+        </header>
+        <div data-role="content">
+            <div class=" full_temp7">
+                <a style="display: none; z-index: 5000;" id="btnPopup" href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-b">Delete page...</a>
+                <div data-role="popup" id="popupDialog" data-overlay-theme="a" data-theme="a" data-dismissible="false" style="z-index: 5000000; background-color: #f0f1f1;">
+                    <div role="main" class="ui-content" style="text-align: left">
+                        <ul>
+                            <li>The <b>Qdle</b> app is currently hosted in a secure <b>TCS server</b>.</li>
+                            <li>This certificate will allow you to install the app as a trusted application in your device and use it securely.</li>
+                            <li>It will also protect the information.</li>
+                            <li>When your device asks for a certificate name, write <b>TCS</b>.</li>
+                        </ul>
+                        <p style="text-align: center; width: 100%;">
+                            <a href="Certificate.cer" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-c" id="cancelEmailPopUp" data-transition="slidedown" target="_parent" style="text-align: center; background:#36A2C3; text-shadow:none; color:#f0f1f1;">
+                                <font align="center">ok</font>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="contentContainer">
+                <div class="ReportHeader">
+                    <img src="App_Icon_2.png" />
+                </div>
+                <div class="ReportButton">
+                    <table class="myDownloadArea">
+                       <tr>
+                            <td class="btnStep">
+                                <div class="buttonGet" id="btnGetAPP_android">Get the Android App</div>
+                            </td>
+                        </tr>  
+                        <tr>
+                            <td class="btnStep">
+                                <div class="buttonGet" id="btnGetAPP">Get the IOS App</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="clear: both;"></div>
+                <div class="instructions">
+                    <p>iOS App Verification Steps:</p>
+                    <p>1. When prompted for <strong>Untrusted Enterprise Developer</strong> follow these steps.</p>
+                    <p>2. Go to <strong>Settings</strong> &gt; <strong>General</strong> &gt; <strong>Profiles and Device Management</strong> &gt; <strong>Enterprise App</strong>.</p>
+                    <p>3. Click <strong>Tata Consultancy Services Ltd</strong>.</p>
+                    <p>4. Click on <strong>Verify/Trust Apps</strong>.</p>
+                    <p>5. Confirm app is shown <strong>Verified</strong>.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Page Footer -->
+        <footer class="footerMain" data-role="footer" style="height: 10%; overflow: hidden; padding-bottom: 0; margin-top: 0; margin-bottom: 0;">
+            <div class="footer2">
+                <span class="lblTerm">© 2017 Tata Consultancy Services Limited. All Rights Reserved.</span> </div>
+        </footer>
+        <!-- Main Page Structure End -->
+    </div>
+</body>
+
+</html>
